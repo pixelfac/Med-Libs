@@ -27,6 +27,9 @@ public class MicrophoneInputManager : MonoBehaviour
 		controls.Record.Record.started += QueRecording;
 		controls.Record.Record.performed += StartRecording;
 		controls.Record.Record.canceled += StopRecording;
+
+		controls.Google.Command.performed += BPressed;
+
 		controls.Enable();
 	}
 
@@ -35,6 +38,9 @@ public class MicrophoneInputManager : MonoBehaviour
 		controls.Record.Record.started -= QueRecording;
 		controls.Record.Record.performed -= StartRecording;
 		controls.Record.Record.canceled -= StopRecording;
+
+		controls.Google.Command.performed -= BPressed;
+
 		controls.Disable();
 	}
 
@@ -83,4 +89,9 @@ public class MicrophoneInputManager : MonoBehaviour
 
 		Transcript transcript = await AudioManager.GetTranscript(url);
 	}
+
+	private async void BPressed(InputAction.CallbackContext ctx)
+    {
+		await AudioManager.GetPlayback("In the province of $, when the soil of our land was tread by different feet, and the zeitgeist was rife with cynicism and spite, there resided a $ knight by the name of $.");
+    }
 }

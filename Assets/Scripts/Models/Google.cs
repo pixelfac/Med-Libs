@@ -1,12 +1,9 @@
-using System.Collections;
-using System.Collections.Generic;
-
 [System.Serializable]
 public class GoogleSpeech
 {
-    public input input;
-    public voice voice;
-    public audioConfig audioConfig;
+    public input input = new input();
+    public voice voice = new voice();
+    public audioConfig audioConfig = new audioConfig();
 }
 
 [System.Serializable]
@@ -27,4 +24,10 @@ public class voice
 public class audioConfig
 {
     public string audioEncoding = "MP3";
+}
+
+[System.Serializable]
+public class AudioResponse
+{
+    public string audioContent;
 }

@@ -27,6 +27,33 @@
                     "isPartOfComposite": false
                 }
             ]
+        },
+        {
+            "name": "Google",
+            "id": "d5efd7fd-a8be-4b93-9638-6ceab0810d1f",
+            "actions": [
+                {
+                    "name": "Command",
+                    "type": "Button",
+                    "id": "4393b50c-0549-4535-95b9-2d535f45b23f",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "935a3145-9e24-41e1-9ac0-83c74a7f8246",
+                    "path": "<Keyboard>/g",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Command",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
         }
     ],
     "controlSchemes": []

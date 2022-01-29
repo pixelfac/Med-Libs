@@ -104,7 +104,6 @@ class AudioManager
     public static async Task GetPlayback(string text)
     {
         HttpClient client = new HttpClient();
-        client.DefaultRequestHeaders.Add("Content-Type", "application/json");
 
         var json = new GoogleSpeech();
         json.input.text = text;
@@ -115,7 +114,9 @@ class AudioManager
         response.EnsureSuccessStatusCode();
 
         var readString = await response.Content.ReadAsStringAsync();
-        var bytes = Convert.FromBase64String(readString);
+        var data = JsonUtility.FromJson<AudioResponse>(readString);
+        Debug.Log(data.audioContent);
+        var bytes = Convert.FromBase64String(data.audioContent);
 
         string fileName = $"Playback-{DateTime.Now.Year}-{DateTime.Now.Month}-{DateTime.Now.Day}-{DateTime.Now.Hour}-{DateTime.Now.Minute}-{DateTime.Now.Second}.mp3";
 
