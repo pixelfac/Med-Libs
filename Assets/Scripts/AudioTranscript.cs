@@ -10,8 +10,12 @@ class AudioTranscript
 {
     readonly static string _auth = "";
 
-    private static async Task<string> SendFile(HttpClient client, string filePath)
+    public static async Task<string> UploadFile(string filePath)
     {
+        HttpClient client = new HttpClient();
+        client.BaseAddress = new Uri("https://api.assemblyai.com/v2/");
+        client.DefaultRequestHeaders.Add("authorization", _auth);
+
         HttpRequestMessage request = new HttpRequestMessage(HttpMethod.Post, "upload");
         request.Headers.Add("Transer-Encoding", "chunked");
 
@@ -36,7 +40,7 @@ class AudioTranscript
         }
     }
 
-    private static async Task<Transcript> GetTranscript(string url)
+    public static async Task<Transcript> GetTranscript(string url)
     {
         HttpClient client = new HttpClient();
         client.BaseAddress = new Uri("https://api.assemblyai.com/v2/");
