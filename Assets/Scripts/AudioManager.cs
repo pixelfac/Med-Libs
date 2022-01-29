@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 using UnityEngine;
 
-class AudioTranscript
+class AudioManager
 {
     private readonly static string _assemblyAuth = "";
     private readonly static string _googleAuth = "";
@@ -101,17 +101,30 @@ class AudioTranscript
         }
     }
 
-    public async Task GetPlayback(string text)
+    public static async Task GetPlayback(string text)
     {
         HttpClient client = new HttpClient();
         client.DefaultRequestHeaders.Add("Content-Type", "application/json");
 
         var json = new GoogleSpeech();
-        json.input.text = "This is a test of the google text to speech api";
+        json.input.text = text;
 
         StringContent payload = new StringContent(JsonUtility.ToJson(json));
 
         HttpResponseMessage response = await client.PostAsync($"https://texttospeech.googleapis.com/v1/text:synthesize?key={_googleAuth}", payload);
         response.EnsureSuccessStatusCode();
+
+        var readString = await response.Content.ReadAsStringAsync();
+        var bytes = Convert.FromBase64String(readString);
+
+        string fileName = $"Playback-{DateTime.Now.Year}-{DateTime.Now.Month}-{DateTime.Now.Day}-{DateTime.Now.Hour}-{DateTime.Now.Minute}-{DateTime.Now.Second}.mp3";
+
+        var filepath = Path.Combine(Application.dataPath + Path.DirectorySeparatorChar + "Recordings", fileName);
+
+        var file = File.OpenWrite(filepath);
+
+        await file.WriteAsync(bytes, 0, bytes.Length);
+
+        file.Close();
     }
 }

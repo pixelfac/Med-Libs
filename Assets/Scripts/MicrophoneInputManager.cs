@@ -79,8 +79,8 @@ public class MicrophoneInputManager : MonoBehaviour
 		string fileName = $"Clip-{DateTime.Now.Year}-{DateTime.Now.Month}-{DateTime.Now.Day}-{DateTime.Now.Hour}-{DateTime.Now.Minute}-{DateTime.Now.Second}.wav";
 
 		SavWav.Save(fileName, recordingSource.clip);
-		string url = await AudioTranscript.UploadFile(fileName);
+		string url = await AudioManager.UploadFile(fileName);
 
-		Transcript transcript = await AudioTranscript.GetTranscript(url);
+		Transcript transcript = await AudioManager.GetTranscript(url);
 	}
 }
