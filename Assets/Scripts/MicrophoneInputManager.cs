@@ -5,12 +5,17 @@ using UnityEngine.InputSystem;
 
 public class MicrophoneInputManager : MonoBehaviour
 {
-	AudioSource recording;
+	AudioSource recordingSource;
 	Controls controls;
+	string micName;
+	[Range(1,10)]
+	[SerializeField] int recordingLength;
 
 	private void Awake()
 	{
 		controls = new Controls();
+		recordingSource = GetComponent<AudioSource>();
+		Debug.Log(recordingSource.ToString());
 	}
 
 	private void OnEnable()
@@ -35,6 +40,11 @@ public class MicrophoneInputManager : MonoBehaviour
 		{
 			Debug.Log("device: " + device);
 		}
+
+		if (Microphone.devices.Length != 0)
+		{
+			micName = Microphone.devices[0];
+		}
 	}
 
 	//Called when button is first pressed down, but before the recording actually starts
@@ -47,11 +57,15 @@ public class MicrophoneInputManager : MonoBehaviour
 	private void StartRecording(InputAction.CallbackContext ctx)
 	{
 		Debug.Log("space is starting");
+		recordingSource.clip = Microphone.Start(micName, false, recordingLength, 44100);
 	}
 
 	//Called on button release
 	private void StopRecording(InputAction.CallbackContext ctx)
 	{
 		Debug.Log("space has ended");
+		Microphone.End(micName);
+
+		recordingSource.PlayDelayed(1f);
 	}
 }
