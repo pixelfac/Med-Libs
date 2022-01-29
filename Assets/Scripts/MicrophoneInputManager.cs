@@ -1,15 +1,20 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using Models;
 
 public class MicrophoneInputManager : MonoBehaviour
 {
 	AudioSource recordingSource;
 	Controls controls;
 	string micName;
+	string folderPath = "Assets/RecordedAudio.cs";
+
 	[Range(1,10)]
 	[SerializeField] int recordingLength;
+
 
 	private void Awake()
 	{
@@ -45,6 +50,10 @@ public class MicrophoneInputManager : MonoBehaviour
 		{
 			micName = Microphone.devices[0];
 		}
+		else
+		{
+			Debug.LogError("No Microphone Detected");
+		}
 	}
 
 	//Called when button is first pressed down, but before the recording actually starts
@@ -61,11 +70,28 @@ public class MicrophoneInputManager : MonoBehaviour
 	}
 
 	//Called on button release
-	private void StopRecording(InputAction.CallbackContext ctx)
+	private async void StopRecording(InputAction.CallbackContext ctx)
 	{
 		Debug.Log("space has ended");
 		Microphone.End(micName);
 
 		recordingSource.PlayDelayed(1f);
+
+		string filepath = SerializeRecording(recordingSource.clip);
+
+		string url = await AudioTranscript.UploadFile(filepath);
+
+		Transcript transcript = await AudioTranscript.GetTranscript(url);
+
+		
+	}
+
+	private string SerializeRecording(AudioClip clip)
+	{
+		float[] samples = new float[clip.samples];
+
+		clip.SetData(samples, 0);
+
+		Convert.ToBase64String
 	}
 }
