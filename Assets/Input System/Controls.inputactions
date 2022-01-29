@@ -1,0 +1,33 @@
+{
+    "name": "Controls",
+    "maps": [
+        {
+            "name": "Record",
+            "id": "0b4a0fdf-b7f8-409a-88a8-504b5f422c9c",
+            "actions": [
+                {
+                    "name": "Record",
+                    "type": "Button",
+                    "id": "b3aefe37-7b2c-4291-a982-b40ada7c1779",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "e02e39a6-2a61-448a-9635-b2786ca888c3",
+                    "path": "<Keyboard>/space",
+                    "interactions": "Hold",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Record",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
