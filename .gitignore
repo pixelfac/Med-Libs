@@ -1,3 +1,8 @@
+# Custom ignore files
+Assets/Recordings
+Assets/Recordings.meta
+Assets/Recordings/*
+
 [Ll]ibrary/
 [Tt]emp/
 [Oo]bj/

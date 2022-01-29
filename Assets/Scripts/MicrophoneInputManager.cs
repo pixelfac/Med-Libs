@@ -3,7 +3,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using Models;
 
 public class MicrophoneInputManager : MonoBehaviour
 {
@@ -77,21 +76,11 @@ public class MicrophoneInputManager : MonoBehaviour
 
 		recordingSource.PlayDelayed(1f);
 
-		string filepath = SerializeRecording(recordingSource.clip);
+		string fileName = $"Clip-{DateTime.Now.Year}-{DateTime.Now.Month}-{DateTime.Now.Day}-{DateTime.Now.Hour}-{DateTime.Now.Minute}-{DateTime.Now.Second}.wav";
 
-		string url = await AudioTranscript.UploadFile(filepath);
+		SavWav.Save(fileName, recordingSource.clip);
+		string url = await AudioTranscript.UploadFile(fileName);
 
 		Transcript transcript = await AudioTranscript.GetTranscript(url);
-
-		
-	}
-
-	private string SerializeRecording(AudioClip clip)
-	{
-		float[] samples = new float[clip.samples];
-
-		clip.SetData(samples, 0);
-
-		Convert.ToBase64String
 	}
 }
