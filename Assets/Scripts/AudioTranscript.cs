@@ -81,10 +81,10 @@ class AudioTranscript
         string message = "";
         foreach (var word in result.words)
         {
-            message += word.text;
+            message += word.text + " ";
         }
 
-        Debug.Log($"Transcript Log: { message.Substring(0, message.Length - 2)}");
+        Debug.Log($"Transcript Log: { message.Trim() }");
 
         return result;
     }
