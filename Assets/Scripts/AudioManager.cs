@@ -12,7 +12,7 @@ class AudioManager
     
     public static async Task<string> UploadFile(string fileName)
     {
-        var filePath = Path.Combine(Application.dataPath + Path.DirectorySeparatorChar + "Recordings", fileName);
+        var filePath = Path.Combine(Application.dataPath, "Recordings", fileName);
 
         HttpClient client = new HttpClient();
         client.BaseAddress = new Uri("https://api.assemblyai.com/v2/");
@@ -118,9 +118,9 @@ class AudioManager
         Debug.Log(data.audioContent);
         var bytes = Convert.FromBase64String(data.audioContent);
 
-        string fileName = $"Playback-{DateTime.Now.Year}-{DateTime.Now.Month}-{DateTime.Now.Day}-{DateTime.Now.Hour}-{DateTime.Now.Minute}-{DateTime.Now.Second}.mp3";
+        string fileName = $"Playback-{DateTime.Now.Year}-{DateTime.Now.Month}-{DateTime.Now.Day}-{DateTime.Now.Hour}-{DateTime.Now.Minute}-{DateTime.Now.Second}.wav";
 
-        var filepath = Path.Combine(Application.dataPath + Path.DirectorySeparatorChar + "Recordings", fileName);
+        var filepath = Path.Combine(Application.dataPath, "Recordings", fileName);
 
         var file = File.OpenWrite(filepath);
 

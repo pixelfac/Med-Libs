@@ -13,7 +13,7 @@ public class ReadCSV_qna : MonoBehaviour
 
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         //calls function below. 
         ReadCSVqna();
@@ -40,15 +40,9 @@ public class ReadCSV_qna : MonoBehaviour
 
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     void ReadCSVqna(){
         /////////*********CHANGE FILE NAME FOR FINAL
-        string fileName = @"qnaStorageFile_story1_UNDERCONSTRUCTION.csv";
+        string fileName = @"Assets/qnaStorageFile_story1.csv";
         StreamReader str = new StreamReader(fileName);
         int count = 1;
         
@@ -72,14 +66,12 @@ public class ReadCSV_qna : MonoBehaviour
                         //question is read here
                         Debug.Log("Question: " + data_values[i].ToString());
                         temp.Add(data_values[i].ToString());
-
                     }
                     else{
                         //each answer is read here
                         Debug.Log("Answer Choice #" + i + " " + data_values[i].ToString());
                         temp.Add(data_values[i].ToString());
                     }
-                    
                 }
             }
             //indicated that this is the end of the line, so we move onto the next

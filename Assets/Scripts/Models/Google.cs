@@ -1,29 +1,31 @@
 [System.Serializable]
 public class GoogleSpeech
 {
-    public input input = new input();
-    public voice voice = new voice();
-    public audioConfig audioConfig = new audioConfig();
+    public Input input = new Input();
+    public Voice voice = new Voice();
+    public AudioConfig audioConfig = new AudioConfig();
 }
 
 [System.Serializable]
-public class input
+public class Input
 {
     public string text;
 }
 
 [System.Serializable]
-public class voice
+public class Voice
 {
-    public string languageCode = "en-us";
-    public string name = "en-US-Wavenet-D";
+    public string languageCode = "en-gb";
+    public string name = "en-gb-Standard-A";
     public string ssmlGender = "MALE";
 }
 
 [System.Serializable]
-public class audioConfig
+public class AudioConfig
 {
-    public string audioEncoding = "MP3";
+    public string audioEncoding = "LINEAR16";
+    public double speakingRate = 0.9;
+    public double pitch = -8.0;
 }
 
 [System.Serializable]
