@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
 
-public class ReadCSV : MonoBehaviour
+public class ReadCSV_qna : MonoBehaviour
 {
 
     //static container for qna map
@@ -47,7 +47,8 @@ public class ReadCSV : MonoBehaviour
     }
 
     void ReadCSVqna(){
-        string fileName = @"D:\Documents\Github_Projects\MedLib_Unity\Med-Libs\qnaStorageFile_story1_UNDERCONSTRUCTION.csv";
+        /////////*********CHANGE FILE NAME FOR FINAL
+        string fileName = @"qnaStorageFile_story1_UNDERCONSTRUCTION.csv";
         StreamReader str = new StreamReader(fileName);
         int count = 1;
         
