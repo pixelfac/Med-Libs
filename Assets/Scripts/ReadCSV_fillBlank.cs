@@ -25,7 +25,7 @@ public class ReadCSV_fillBlank : MonoBehaviour
     void ReadCSVfillBlank(){
         /////////*********CHANGE FILE NAME FOR FINAL
         string txtfileName = @"Story1.txt";
-        string csvfileName = @"fillBlanks_story1_TEST.csv";
+        string csvfileName = @"Assets/fillBlanks_story1_TEST.csv";
         
         StreamReader str1 = new StreamReader(txtfileName);
         StreamReader str2 = new StreamReader(csvfileName);

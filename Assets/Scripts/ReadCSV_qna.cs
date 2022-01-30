@@ -40,15 +40,9 @@ public class ReadCSV_qna : MonoBehaviour
 
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     void ReadCSVqna(){
         /////////*********CHANGE FILE NAME FOR FINAL
-        string fileName = @"qnaStorageFile_story1_TEST.csv";
+        string fileName = @"Assets/qnaStorageFile_story1_TEST.csv";
         StreamReader str = new StreamReader(fileName);
         int count = 1;
         
