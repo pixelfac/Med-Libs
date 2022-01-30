@@ -5,12 +5,18 @@ using System.Linq;
 
 using UnityEngine;
 using UnityEngine.Networking;
+using TMPro;
 
 public class SpeakerScript : MonoBehaviour
 {
+    [SerializeField]
+    public TextMeshProUGUI text;
+    
     // Start is called before the first frame update
     async void Start()
     {
+        await AudioManager.GetPlayback(text.text);
+
         var path = Path.Combine(Application.dataPath, "Recordings");
 
         var directory = new DirectoryInfo(path);
