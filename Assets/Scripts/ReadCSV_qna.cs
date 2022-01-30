@@ -12,9 +12,13 @@ public class ReadCSV_qna : MonoBehaviour
     public static string[] answerArray;
 
 
+
+
     // Start is called before the first frame update
     void Awake()
     {
+        qnaStorage.Clear();
+        
         //calls function below. 
         ReadCSVqna();
 
