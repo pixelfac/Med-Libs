@@ -6,8 +6,8 @@ using TMPro;
 
 public class ScrollText : MonoBehaviour
 {
-    private readonly string txtfileName = @"FullStory.txt";
-    private readonly string csvfileName = @"StoryVariables.csv";
+    private readonly string txtfileName = @"Assets/FullStory.txt";
+    private readonly string csvfileName = @"Assets/StoryVariables.csv";
 
     // Start is called before the first frame update
     void Start()
@@ -45,7 +45,7 @@ public class ScrollText : MonoBehaviour
                 if ((index = str2.ReadLine()) != null)
                 {
                     int intIndex = int.Parse(index);
-                    //Debug.Log(intIndex);
+                    Debug.Log(intIndex);
                     Debug.Log(ReadCSV_qna.answerArray[intIndex]);
                     final += ReadCSV_qna.answerArray[intIndex];
                 }

@@ -42,7 +42,7 @@ public class ReadCSV_qna : MonoBehaviour
 
     void ReadCSVqna(){
         /////////*********CHANGE FILE NAME FOR FINAL
-        string fileName = @"Assets/qnaStorageFile_story1_TEST.csv";
+        string fileName = @"Assets/qnaStorageFile_story1.csv";
         StreamReader str = new StreamReader(fileName);
         int count = 1;
         
