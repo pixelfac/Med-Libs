@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class QuestionChanger : MonoBehaviour
 {
@@ -64,19 +65,25 @@ public class QuestionChanger : MonoBehaviour
         Debug.Log(questionNumber);
         Debug.Log(questionCount);
 
-        if (questionNumber > questionCount){
+        if (questionNumber > questionCount)
+        {
 
-            for (int i = 0 ; i < ReadCSV_qna.answerArray.Length ; i++){
+            for (int i = 0; i < ReadCSV_qna.answerArray.Length; i++)
+            {
                 Debug.Log("Index " + i + " is " + ReadCSV_qna.answerArray[i]);
             }
 
+            SceneManager.LoadScene("ScrollScene");
+
         }
-        else{
+        else
+        {
             question.text = ReadCSV_qna.qnaStorage[questionNumber][0];
 
             int vectorSize = ReadCSV_qna.qnaStorage[questionNumber].Count;
 
-            if (vectorSize == 5){
+            if (vectorSize == 5)
+            {
                 groupFour.SetActive(true);
                 groupThree.SetActive(false);
                 groupTwo.SetActive(false);
@@ -86,7 +93,8 @@ public class QuestionChanger : MonoBehaviour
                 fourButtons[2].text = ReadCSV_qna.qnaStorage[questionNumber][3];
                 fourButtons[3].text = ReadCSV_qna.qnaStorage[questionNumber][4];
             }
-            else if (vectorSize == 4){
+            else if (vectorSize == 4)
+            {
                 groupFour.SetActive(false);
                 groupThree.SetActive(true);
                 groupTwo.SetActive(false);
@@ -96,18 +104,16 @@ public class QuestionChanger : MonoBehaviour
                 threeButtons[2].text = ReadCSV_qna.qnaStorage[questionNumber][3];
 
             }
-            else if (vectorSize == 3){
+            else if (vectorSize == 3)
+            {
                 groupFour.SetActive(false);
                 groupThree.SetActive(false);
                 groupTwo.SetActive(true);
 
                 twoButtons[0].text = ReadCSV_qna.qnaStorage[questionNumber][1];
                 twoButtons[1].text = ReadCSV_qna.qnaStorage[questionNumber][2];
-                
+
             }
         }
-
-        
-
     }
 }
