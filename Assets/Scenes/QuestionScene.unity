@@ -859,7 +859,6 @@ GameObject:
   m_Component:
   - component: {fileID: 597139994}
   - component: {fileID: 597139995}
-  - component: {fileID: 597139996}
   - component: {fileID: 597139997}
   m_Layer: 0
   m_Name: Question Manager
@@ -892,18 +891,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 664fcb0cee6ab3b4daceb959e908a74e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &597139996
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 597139993}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d46404a1e368b9844b83d0f3ef065003, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &597139997
