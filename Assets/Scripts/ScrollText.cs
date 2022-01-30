@@ -10,7 +10,7 @@ public class ScrollText : MonoBehaviour
     private readonly string csvfileName = @"Assets/StoryVariables.csv";
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         var text = ReadCSVfillBlank();
         this.GetComponent<TextMeshProUGUI>().text = text;
