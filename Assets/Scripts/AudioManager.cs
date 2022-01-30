@@ -7,8 +7,8 @@ using UnityEngine;
 
 class AudioManager
 {
-    private readonly static string _assemblyAuth = "";
-    private readonly static string _googleAuth = "";
+    private readonly static string _assemblyAuth = "aa7987c18cc24a5bab99e644f4fb29e3";
+    private readonly static string _googleAuth = "AIzaSyCqeBaO4tqyaZEUHHJeoqU4JH8h9qeHoz8";
     
     public static async Task<string> UploadFile(string fileName)
     {
