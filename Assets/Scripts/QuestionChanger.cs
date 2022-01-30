@@ -12,6 +12,11 @@ public class QuestionChanger : MonoBehaviour
     int questionCount;
     int questionNumber;
 
+    public SpriteRenderer spriteBackground;
+    public Sprite firstBackground;
+    public Sprite secondBackground;
+    public Sprite thirdBackground;
+
     public GameObject groupFour, groupThree, groupTwo;
     public TextMeshProUGUI question;
 
@@ -27,6 +32,7 @@ public class QuestionChanger : MonoBehaviour
         questionCount = ReadCSV_qna.qnaStorage.Count;
         questionNumber = 0;
         updateQuestion();
+        spriteBackground.sprite = firstBackground;
         
     }
 
@@ -81,6 +87,12 @@ public class QuestionChanger : MonoBehaviour
             question.text = ReadCSV_qna.qnaStorage[questionNumber][0];
 
             int vectorSize = ReadCSV_qna.qnaStorage[questionNumber].Count;
+            if (questionNumber == 8){
+                spriteBackground.sprite = secondBackground;
+            }
+            else if (questionNumber == 16){
+                spriteBackground.sprite = thirdBackground;
+            }
 
             if (vectorSize == 5)
             {
