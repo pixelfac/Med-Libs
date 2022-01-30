@@ -41,3 +41,6 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Middle Ground
+    uniqueID: 1666105545
+    locked: 0
