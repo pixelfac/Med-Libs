@@ -72,14 +72,12 @@ public class ReadCSV_qna : MonoBehaviour
                         //question is read here
                         Debug.Log("Question: " + data_values[i].ToString());
                         temp.Add(data_values[i].ToString());
-
                     }
                     else{
                         //each answer is read here
                         Debug.Log("Answer Choice #" + i + " " + data_values[i].ToString());
                         temp.Add(data_values[i].ToString());
                     }
-                    
                 }
             }
             //indicated that this is the end of the line, so we move onto the next
