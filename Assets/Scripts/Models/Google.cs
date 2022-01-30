@@ -24,6 +24,8 @@ public class Voice
 public class AudioConfig
 {
     public string audioEncoding = "LINEAR16";
+    public double speakingRate = 0.9;
+    public double pitch = -8.0;
 }
 
 [System.Serializable]

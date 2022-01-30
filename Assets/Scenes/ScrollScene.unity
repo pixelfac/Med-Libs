@@ -153,6 +153,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37d270a477beffc4bb6bb695be5ef284, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  text: {fileID: 1334913346}
 --- !u!82 &48212436
 AudioSource:
   m_ObjectHideFlags: 0
@@ -346,36 +347,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &517756259
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 517756260}
-  m_Layer: 0
-  m_Name: Final_Scroll_Assembler
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &517756260
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 517756259}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 963.6057, y: 557.8209, z: -91.565636}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &615073740
 GameObject:
   m_ObjectHideFlags: 0
@@ -489,6 +460,7 @@ GameObject:
   - component: {fileID: 1334913347}
   - component: {fileID: 1334913346}
   - component: {fileID: 1334913345}
+  - component: {fileID: 1334913348}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -554,53 +526,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "exhibit utmost $. However, what thin thread of tranquility existed was
-    cut when onto this land came a great monster, the terrifying $.\r\n\r\nThe $
-    was a remnant of ancient times, a wretched cryptid bringing animosity and destruction
-    in its wake. Fearing $, the Lord's conscripted $ to slaughter the beast and return
-    peace to the kingdom.\r\n\r\nWith their trusty $ in hand, $ mounted their steed,
-    a $, and embarked upon their treacherous journey. \r\n\r\nBy the next day, $
-    had entered into a humid slough, trudging through the murky waters and foggy
-    heat, struggling to maintain balance as the slimy dirt suctioned them in place.
-    There were $ hissing in writhing snarls underneath the ambience of the mangroves.
-    A shadow moved by his left side revealing as such. $ was met with the image of
-    a sickly, drooling toad-like creature, It's teeth dripping with $. $ was $. Taking
-    a step back, they gathered themselves before lifting up their $. The toad produced
-    a thunderous croak and lurched itself at $. Now on the defensive, they slung
-    their $ at the beast - making contact with it's tender flesh and knocking it
-    to the ground. \r\n\r\n$ pulled a tooth full of $ from the creature, before $
-    themselves back upon their trusty $ and pushing forth.\r\n\r\nWas not long before
-    they came across a vast plain of fine $. Intrigued by a dim shimmering  light,
-    $ found a luminescent $ hiding among the stalks. Compelled by $ they lifted it
-    in their fingers and $ it. Suddenly, it exploded in light, startling their beloved
-    $. The light twisted and bent into the form of some impossible, grandiose being.
-    Towering over the hero, it spoke: \"I am the spirit of the $, you have come and
-    disturbed my $, I will let you leave in peace if you can prove your proficiency
-    and defeat me in a battle of wits\". $ decided to $, which apparently worked.
-    The $ spirit nodded in approval. Then, reaching forward, she took their $, held
-    it close, and $ something. When she finished, the $ had a glistening, ethereal
-    sheen. The spirit then dissipated, leaving $ to descend upon the trail once again.\r\n\r\n$
-    finally reached the alcove of the legendary $. The entrance lay decorated with
-    a panoply of $. The ceilings were a dripping, wet red. Lifting their $ higher,
-    $ led their $ through the winding stone. Then, they heard a thumping, brutal
-    'thound' to the foundation. Snapping their head back, they were met with a curdling
-    realization: the dreaded $ had been following from behind. Noticing it had been
-    recognized, the $ $ itself towards $, bearing down it's great form upon them.
-    Lifting their enchanted $, $ thrust it at the creature's $. The glow of the weapon
-    intensified, searing into the creature as it $ in an intense agony. Still, it
-    wasn't enough, the pure vitriol stemming from the creature's gaze was palpable
-    - It wouldn't succumb so quickly. Repositioning itself, it once again rushed
-    towards $, sending energy tremoring across through its muscles. $ as slammed
-    into the $ coughing up their choked, sanguine phlegm.\r\n\r\nStill, $ had to
-    have weakened it somewhat - $ recalled the trophy he had taken from the defeated
-    toad-creature. The toad\u2019s mouth had been dripping with $, the potency might
-    still permeate within. Reaching into their equipment, they found the tooth, holding
-    it cautiously in their hands. There would not be room for another opportunity,
-    The monster $ forward again, and this time, $ was prepared. Thrusting their hand
-    up towards the creature, they punctured through its body with the fang. The monster
-    froze still for only a moment before $. It was only a second - its mouth frothed
-    and it fell to the ground lifeless.\n\nGathering themself, $ turned their glance
-    to the defeated monster. They smiled, and returned home."
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -677,6 +603,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1334913343}
   m_CullTransparentMesh: 1
+--- !u!114 &1334913348
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1334913343}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f15fb64529f00b47891788dce6a6e39, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1569933129
 GameObject:
   m_ObjectHideFlags: 0
