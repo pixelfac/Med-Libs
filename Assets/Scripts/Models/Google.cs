@@ -16,7 +16,7 @@ public class Input
 public class Voice
 {
     public string languageCode = "en-gb";
-    public string name = "en-gb-Standard-A";
+    public string name = "en-gb-Wavenet-B";
     public string ssmlGender = "MALE";
 }
 
