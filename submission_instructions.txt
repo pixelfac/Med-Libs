@@ -1,0 +1,12 @@
+Steps to play the Game
+
+1) Go To the following Github repository:
+https://github.com/pixelfac/Med-Libs
+
+2) Download the repository
+
+3) Extract the 'Med-Libs alpha.zip' file
+
+4) Open the extracted folder
+
+5) Run 'Med Libs.exe'
